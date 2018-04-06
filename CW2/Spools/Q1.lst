@@ -1,0 +1,14 @@
+SQL> Select StockNo, Description, Quantity
+  2  From Stocks
+  3  Where Quantity > 25
+  4  Order by Quantity;
+
+   STOCKNO DESCRIPTION                QUANTITY                                  
+---------- ------------------------ ----------                                  
+       103 Photocopying paper               30                                  
+       117 5.25 in. floppy disks            32                                  
+       121 Tipp-ex bottles                  35                                  
+       107 Drawing pins                     37                                  
+       105 Sticky labels                    45                                  
+
+SQL> spool off

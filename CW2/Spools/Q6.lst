@@ -1,0 +1,17 @@
+SQL> Select SuppName AS "Supplier Name",
+  2  Replace (Street||','||Town||','||County||','||PostCode,',,',',')
+  3  As "Supplier Address"
+  4  From Suppliers;
+
+Supplier Name                  Supplier Address                                                                                                                                                         
+------------------------------ ---------------------------------------------------------------------                                                                                                    
+TKG Tools Ltd.                 7 High Street,Swansea,SA7  2WG                                                                                                                                           
+Office Matters                 20 Berrick Street,Bridgend,Mid Glam.,CF38 3BB                                                                                                                            
+Legal Services Ltd.            Westway Road,London,N8  8PA                                                                                                                                              
+I.T. Supplies (Wales)          3 Marlborough Ave.,Cardiff,CF1  1IT                                                                                                                                      
+Fastorder Stationers           Riverside View,Newport,Gwent,NP1  7XJ                                                                                                                                    
+Business Systems Ltd.          155 Stradleigh Place,London,E10 6LL                                                                                                                                      
+
+6 rows selected.
+
+SQL> spool off

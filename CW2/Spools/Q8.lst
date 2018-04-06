@@ -1,0 +1,11 @@
+SQL> Select StockNo, Description, Price
+  2  From Stocks Where StoreCode = 'LEG'
+  3  AND Price > (Select AVG(Price) From Stocks);
+
+   STOCKNO DESCRIPTION                   PRICE                                                                                                                                                          
+---------- ------------------------ ----------                                                                                                                                                          
+       126 Sealing wax                    7.99                                                                                                                                                          
+       127 Red binding ribbon             6.47                                                                                                                                                          
+       128 A3 cream notary paper          7.85                                                                                                                                                          
+
+SQL> Spool Off

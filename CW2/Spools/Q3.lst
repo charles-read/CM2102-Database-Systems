@@ -1,0 +1,9 @@
+SQL> Select * From Suppliers
+  2  Where TelNo like '081%' OR Street like '%Road%';
+
+SUPP SUPPNAME                       STREET                   TOWN             COUNTY           POSTCODE   TELNO            FAXNO                                                                        
+---- ------------------------------ ------------------------ ---------------- ---------------- ---------- ---------------- ----------------                                                             
+S5   Legal Services Ltd.            Westway Road             London                            N8  8PA    081 333 1246     081 333 5490                                                                 
+S6   Business Systems Ltd.          155 Stradleigh Place     London                            E10 6LL    081 535 3535     081 535 3355                                                                 
+
+SQL> spool off

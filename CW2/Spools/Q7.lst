@@ -1,0 +1,12 @@
+SQL> Select Distinct StoreCode From Stocks
+  2  Minus Select Distinct StoreCode
+  3  From Stocks StocksA, Suppliers
+  4  Where Suppliers.SuppCode = StocksA.SuppCode
+  5  And Suppliers.Town = 'Cardiff';
+
+STOREC                                                                                                                                                                                                  
+------                                                                                                                                                                                                  
+LEG                                                                                                                                                                                                     
+WORK                                                                                                                                                                                                    
+
+SQL> spool off

@@ -1,0 +1,45 @@
+SQL> Select S.StockNo, S.Description, Count(OrderNo) AS "Number of Orders"
+  2  From Stocks S, Orderitems O
+  3  Where S.StockNo = O.StockNo(+)
+  4  Group By S.StockNo, S.Description;
+
+   STOCKNO DESCRIPTION              Number of Orders                                                                                                                                                    
+---------- ------------------------ ----------------                                                                                                                                                    
+       110 Large envelopes                         0                                                                                                                                                    
+       116 3.5 in. floppy disks                    1                                                                                                                                                    
+       118 Toner cartridges                        0                                                                                                                                                    
+       106 Sellotape                               1                                                                                                                                                    
+       107 Drawing pins                            0                                                                                                                                                    
+       111 Black ballpoints                        1                                                                                                                                                    
+       123 Audio cassettes                         0                                                                                                                                                    
+       130 8 x 1 inch wood screws                  0                                                                                                                                                    
+       134 Electrical solder                       0                                                                                                                                                    
+       109 Window envelopes                        0                                                                                                                                                    
+       126 Sealing wax                             0                                                                                                                                                    
+       131 10 x 1 inch wood screws                 0                                                                                                                                                    
+       135 White spirit                            0                                                                                                                                                    
+       104 Coloured paper                          0                                                                                                                                                    
+       132 13 amp electrical wire                  0                                                                                                                                                    
+       139 Angle brackets                          0                                                                                                                                                    
+       119 FX-100 printer ribbon                   0                                                                                                                                                    
+       122 Typewriter ribbons                      0                                                                                                                                                    
+       102 A4 headed paper                         0                                                                                                                                                    
+       114 Fluorescent markers                     0                                                                                                                                                    
+       117 5.25 in. floppy disks                   1                                                                                                                                                    
+       124 Anti-static wipes                       0                                                                                                                                                    
+       127 Red binding ribbon                      0                                                                                                                                                    
+       128 A3 cream notary paper                   0                                                                                                                                                    
+       137 Masking tape                            0                                                                                                                                                    
+       138 Door hinges                             0                                                                                                                                                    
+       103 Photocopying paper                      0                                                                                                                                                    
+       129 Coloured ink                            0                                                                                                                                                    
+       105 Sticky labels                           0                                                                                                                                                    
+       108 Staples                                 1                                                                                                                                                    
+       112 Coloured pens                           0                                                                                                                                                    
+       113 HB pencils                              0                                                                                                                                                    
+       115 12 inch rulers                          0                                                                                                                                                    
+       121 Tipp-ex bottles                         0                                                                                                                                                    
+
+34 rows selected.
+
+SQL> spool off

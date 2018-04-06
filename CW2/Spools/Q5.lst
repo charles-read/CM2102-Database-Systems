@@ -1,0 +1,12 @@
+SQL> Select StoreCode From Stocks
+  2  Group by StoreCode
+  3  Having Count (Distinct SuppCode) >=3;
+
+STOREC                                                                                                                                                                                                  
+------                                                                                                                                                                                                  
+TYP                                                                                                                                                                                                     
+IT                                                                                                                                                                                                      
+CENT                                                                                                                                                                                                    
+LEG                                                                                                                                                                                                     
+
+SQL> spool off

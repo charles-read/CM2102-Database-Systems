@@ -1,0 +1,18 @@
+SQL> Select StoreCode, Description, Price
+  2  From Stocks
+  3  Join (Select Max(Price) As M From Stocks
+  4  Group by StoreCode) Max
+  5  On Stocks.Price = Max.M;
+
+STOREC DESCRIPTION                   PRICE                                                                                                                                                              
+------ ------------------------ ----------                                                                                                                                                              
+CENT   A4 headed paper                4.11                                                                                                                                                              
+IT     Toner cartridges              32.99                                                                                                                                                              
+TYP    FX-100 printer ribbon         23.99                                                                                                                                                              
+LEG    Sealing wax                    7.99                                                                                                                                                              
+WORK   8 x 1 inch wood screws         2.85                                                                                                                                                              
+WORK   Angle brackets                 2.85                                                                                                                                                              
+
+6 rows selected.
+
+SQL> spool off

@@ -1,0 +1,13 @@
+SQL> Select StoreCode, Count(StockNo) As "No of Items", Round(AVG(Price), 2) As "Average Price"
+  2  From Stocks
+  3  Group by StoreCode;
+
+STOREC No of Items Average Price                                                                                                                                                                        
+------ ----------- -------------                                                                                                                                                                        
+TYP              5          9.75                                                                                                                                                                        
+WORK             8          1.76                                                                                                                                                                        
+CENT            11          1.63                                                                                                                                                                        
+IT               4         15.54                                                                                                                                                                        
+LEG              6          5.34                                                                                                                                                                        
+
+SQL> spool off

@@ -1,0 +1,10 @@
+SQL> Select SuppCode, SuppName
+  2  From Suppliers
+  3  Where Town = 'Cardiff' OR Town = 'Swansea';
+
+SUPP SUPPNAME                                                                   
+---- ------------------------------                                             
+S1   TKG Tools Ltd.                                                             
+S2   I.T. Supplies (Wales)                                                      
+
+SQL> Spool off
